@@ -1,0 +1,884 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Roshan Ojha">
+
+    <title>Music Player</title>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+
+
+   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+  </head>
+
+  <body style="background-color:#0c1027;">
+    <!-- TOP ARROW -->
+    <div style="position:absolute;">
+    <div class="top-arrow" style="z-index: 6; height:50px; width: 50px; position:fixed; margin-top: 80vh; margin-left: 193vh;">
+      <a href="#nav"><img src="Assets/up.png" style="height: 50px; width: 50px;"></a>
+    </div>
+    </div>
+
+<!-- NAVIGATION BAR -->
+
+
+   
+<nav class="navbar navbar-expand-lg navbar-dark" id="nav" style="background-color:#0c1027;">
+  <div class="container-fluid" style="padding:0px; margin-top: 10px;">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#"> <img src="Assets/logonew.png" alt="" class="d-inline-block align-text-top" style="height:60px; width: 147px; margin-top: -20px ;"></a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" style="padding-left: 20px;">
+          <a class="nav-link active" aria-current="page" href="#">Discover</a>
+        </li>
+
+        <li class="nav-item" style="padding-left: 20px;">
+          <a class="nav-link" aria-current="page" href="#trending-songs">Trending songs</a>
+        </li>
+
+        <li class="nav-item" style="padding-left: 20px;">
+          <a class="nav-link" aria-current="page" href="#popular-artist-position">Popular Artist</a>
+        </li>
+
+        <li class="nav-item" style="padding-left: 20px;">
+          <a class="nav-link" aria-current="page" href="#latest-english">Latest English</a>
+        </li>
+        <li>
+          
+        </li>
+        
+      </ul>
+      <form class="d-flex" role="search" style="padding-right: 20px;">
+
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+     </form>
+
+         &nbsp&nbsp&nbsp
+
+        <i class="fa fa-bell" aria-hidden="true" style="color: whitesmoke; margin-top: 10px;">
+          <span class="badge">1</span>
+        </i>
+
+        &nbsp&nbsp&nbsp&nbsp
+        
+        <img src="https://images.unsplash.com/photo-1657042742546-b1ff81d52b74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80" style="height: 50px; width:50px; border-radius: 50%; margin-right:20px; margin-top:5px">
+
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- BODY STARTS -->
+
+
+<div class="container-fluid" style="margin-top:20px;">
+   <div class="row">
+      <!-- 9 columns section -->
+        <div class="col-12 col-lg-9 ">
+
+            <div class="d-flex justify-content-center">
+            <input type="radio" name="slider" id="item-1" checked>
+            <input type="radio" name="slider" id="item-2">
+            <input type="radio" name="slider" id="item-3">
+          <div class="cards shadow-pop p-3 mb-5 rounded ">
+            <label class="card" for="item-1" id="song-1">
+              <img class="carousel-img" src="Assets/abcd.jpg" alt="song">
+            </label>
+            <label class="card" for="item-2" id="song-2">
+              <img class="carousel-img" src="Assets/unnamed.png">
+            </label>
+            <label class="card" for="item-3" id="song-3">
+              <img class="carousel-img" src="Assets/def.png" alt="song">
+            </label>
+            </div>
+
+           </div>
+          </div>
+
+        
+
+
+        <!-- Aside 3 column section -->
+
+        <div class=" col-lg-3">
+
+          <div class="row ">
+
+            <div class="col-8 text-color-white my-playlist-heading" style="">My Playlist</div>
+
+            <div class="col-4"> 
+                <div class="dropdown" >
+                  <button class="btn btn-secondary dropdown-toggle d-inline-block" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false" style=" background-color: transparent; background: transparent; border-color: transparent; color: #4cd7b8;">
+                    Queue
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                    <li><a class="dropdown-item active" href="#">Playlist</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Favourite songs</a></li>
+                    
+                  </ul>
+                </div>
+            </div>
+
+          </div>
+
+
+        <div class="row row-max-height">
+        <div class="row playlist-row ">
+            <div class="col-2 playlist-num">01.</div>
+            <div class="col-3 playlist-img"><img src="https://images.unsplash.com/photo-1619983081563-430f63602796?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"></div>
+            <div class="col-5">
+              <div class="row playlist-song-name" style="margin-left: -10px;"> <audio id="myAudio" src="http://www.jplayer.org/audio/mp3/Miaow-02-Hidden.mp3" preload="auto"></audio>
+                <a onClick="togglePlay()">Perferct</a></div>
+              <div class="row playlist-singer-name">Ed Sheeran</div>
+            </div>
+            <div class="col-2 d-flex justify-content-center"><i class="fa-solid fa-heart favourites" ></i></div>
+             
+         </div>
+
+         <div class="row playlist-row">
+            <div class="col-2 playlist-num">02.</div>
+            <div class="col-3 playlist-img"><img src="https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"></div>
+            <div class="col-5">
+              <div class="row playlist-song-name">Without You</div>
+              <div class="row playlist-singer-name">Avicii</div>
+            </div>
+            <div class="col-2 d-flex justify-content-center"><i class="fa-solid fa-heart favourites" ></i></div>
+             
+         </div>
+
+         <div class="row playlist-row">
+            <div class="col-2 playlist-num">03.</div>
+            <div class="col-3 playlist-img"><img src="https://images.unsplash.com/photo-1476900543704-4312b78632f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"></div>
+            <div class="col-5">
+              <div class="row playlist-song-name">Until I Found You</div>
+              <div class="row playlist-singer-name">Stephen Sanchez</div>
+            </div>
+            <div class="col-2 d-flex justify-content-center"><i class="fa-solid fa-heart favourites" ></i></div>
+             
+         </div>
+
+         <div class="row playlist-row">
+            <div class="col-2 playlist-num">04.</div>
+            <div class="col-3 playlist-img"><img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"></div>
+            <div class="col-5">
+              <div class="row playlist-song-name"> Snowman</div>
+              <div class="row playlist-singer-name">Sia</div>
+            </div>
+            <div class="col-2 d-flex justify-content-center"><i class="fa-solid fa-heart favourites" ></i></div>
+             
+         </div>
+
+
+         <div class="row playlist-row">
+            <div class="col-2 playlist-num">05.</div>
+            <div class="col-3 playlist-img"><img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=326&q=80"></div>
+            <div class="col-5">
+              <div class="row playlist-song-name">Love Story</div>
+              <div class="row playlist-singer-name">Taylor Swift</div>
+            </div>
+            <div class="col-2 d-flex justify-content-center"><i class="fa-solid fa-heart favourites" ></i></div>
+             
+         </div>
+
+         <div class="row playlist-row">
+            <div class="col-2 playlist-num">06.</div>
+            <div class="col-3 playlist-img"><img src="https://images.unsplash.com/photo-1526495124232-a04e1849168c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"></div>
+            <div class="col-5">
+              <div class="row playlist-song-name">Shape Of You</div>
+              <div class="row playlist-singer-name">Ed Sheeran</div>
+            </div>
+            <div class="col-2 d-flex justify-content-center"><i class="fa-solid fa-heart favourites" ></i></div>
+             
+         </div>
+
+         <div class="row playlist-row">
+            <div class="col-2 playlist-num">07.</div>
+            <div class="col-3 playlist-img"><img src="https://images.unsplash.com/photo-1498412204215-4fb8007a617e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80"></div>
+            <div class="col-5">
+              <div class="row playlist-song-name">See You Again</div>
+              <div class="row playlist-singer-name">Wiz Khalifa</div>
+            </div>
+            <div class="col-2 d-flex justify-content-center"><i class="fa-solid fa-heart favourites" ></i></div>
+             
+         </div>
+
+         <div class="row playlist-row">
+            <div class="col-2 playlist-num">08.</div>
+            <div class="col-3 playlist-img"><img src="https://images.unsplash.com/photo-1508256638959-56984bf03826?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"></div>
+            <div class="col-5">
+              <div class="row playlist-song-name">Sugar</div>
+              <div class="row playlist-singer-name">Maroon 5</div>
+            </div>
+            <div class="col-2 d-flex justify-content-center"><i class="fa-solid fa-heart favourites" ></i></div>
+             
+         </div>
+
+         <div class="row playlist-row">
+            <div class="col-2 playlist-num">08.</div>
+            <div class="col-3 playlist-img"><img src="https://images.unsplash.com/photo-1508256638959-56984bf03826?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"></div>
+            <div class="col-5">
+              <div class="row playlist-song-name">Sugar</div>
+              <div class="row playlist-singer-name">Maroon 5</div>
+            </div>
+            <div class="col-2 d-flex justify-content-center"><i class="fa-solid fa-heart favourites" ></i></div>
+             
+         </div>
+
+         <div class="row playlist-row">
+            <div class="col-2 playlist-num">08.</div>
+            <div class="col-3 playlist-img"><img src="https://images.unsplash.com/photo-1508256638959-56984bf03826?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"></div>
+            <div class="col-5">
+              <div class="row playlist-song-name">Sugar</div>
+              <div class="row playlist-singer-name">Maroon 5</div>
+            </div>
+            <div class="col-2 d-flex justify-content-center"><i class="fa-solid fa-heart favourites" ></i></div>
+             
+         </div>
+
+          <div class="row playlist-row">
+            <div class="col-2 playlist-num">08.</div>
+            <div class="col-3 playlist-img"><img src="https://images.unsplash.com/photo-1508256638959-56984bf03826?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"></div>
+            <div class="col-5">
+              <div class="row playlist-song-name"><audio > Sugar </audio></div>
+              <div class="row playlist-singer-name">Maroon 5</div>
+            </div>
+            <div class="col-2 d-flex justify-content-center"><i class="fa-solid fa-heart favourites" ></i></div>
+             
+         </div>
+         </div>
+         
+
+
+       
+
+
+        </div>
+      </div>
+            
+          
+
+          
+
+               
+    </div>      
+  </div> 
+
+
+
+
+    <!-- LATEST RELEASE -->
+
+
+
+    <div class="container-fluid">
+      <div class="row">
+         <div class="col-12 col-lg-9" >
+
+                <div class="row latest-release" id="trending-songs">
+                  <div class="col-12">Trending Songs</div>
+                </div>
+
+                
+                 <div class="row g-5">
+
+                      <div class="col-12 col-md-6">
+                       <div class="p-0">
+                           <div class="row" style="height:100px;">
+
+                              <div class="col-3">
+                              
+
+                              <audio id="myAudio" src="http://www.sousound.com/music/healing/healing_01.mp3" preload="auto">
+</audio>                     
+                                
+                              
+                                
+                                
+                                <img class="latest-release-img box" src="https://e.snmc.io/i/600/s/634e6bb5859fd8dda11d23b96eab9ca1/9714760/billie-eilish-when-we-all-fall-asleep-where-do-we-go-cover-art.jpg">
+                                
+                              
+
+                              
+                              
+                              </div>
+
+                              <div class="col-7">
+                                <div class="row" style="height: 33%;"></div>
+                                <div class="row" style=" height: 33%;">
+                                   <span class="singer-name">Wish you were gay</span>
+                                </div>
+                                <div class="row">
+                                  <span class="date">29 March 2019</span>
+                                </div>
+                              </div>
+
+                              <div class="col-2">
+                                <div class="row">
+
+                                  <div class="dropdown">
+                                      <p class=" triple-dot" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">...
+                                      </p>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                      </ul>
+                                  </div>
+
+                                </div>
+                                <div class="row">
+                                  <span class="timer">3.42</span>
+                                </div>
+                                <div class="row"></div>
+                              </div>
+
+                              
+                          </div>
+                       </div>
+                      </div>
+
+
+
+                      <div class="col">
+                        <div class="p-0">
+                          <div class="p-0">
+                           <div class="row" style="height:100px;">
+
+                              <div class="col-3">
+                                <img class="latest-release-img" src="https://geo-media.beatsource.com/image_size/500x500/2/1/7/217183b0-375d-475e-bfa7-7633a1d6388c.jpg">
+                              </div>
+
+                              <div class="col-7">
+                                <div class="row" style="height: 33%;"></div>
+                                <div class="row" style=" height: 33%;">
+                                   <span class="singer-name">Heat Waves</span>
+                                </div>
+                                <div class="row">
+                                  <span class="date">22 Oct 2020</span>
+                                </div>
+                              </div>
+
+                              <div class="col-2">
+                                <div class="row">
+
+                                  <div class="dropdown">
+                                      <p class=" triple-dot" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">...
+                                      </p>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                      </ul>
+                                  </div>
+
+                                </div>
+                                <div class="row">
+                                  <span class="timer">3.55</span>
+                                </div>
+                                <div class="row"></div>
+                              </div>
+
+                              
+                          </div>
+                       </div>
+                        </div>
+                      </div>
+
+                  </div>
+
+
+                  <div class="row g-5" style="margin-top: 20px;">
+
+                      <div class="col-12 col-md-6">
+                       <div class="p-0">
+                           <div class="row" style="height:100px;">
+
+                              <div class="col-3">
+                                <img class="latest-release-img" src="https://assets.vogue.com/photos/623b4f0174ede191983e2c76/master/w_2560%2Cc_limit/unnamed%2520(3).jpg">
+                              </div>
+
+                              <div class="col-7">
+                                <div class="row" style="height: 33%;"></div>
+                                <div class="row" style=" height: 33%;">
+                                   <span class="singer-name">As it was</span>
+                                </div>
+                                <div class="row">
+                                  <span class="date">20 May 2022</span>
+                                </div>
+                              </div>
+
+                              <div class="col-2">
+                                <div class="row">
+
+                                  <div class="dropdown">
+                                      <p class=" triple-dot" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">...
+                                      </p>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                      </ul>
+                                  </div>
+
+                                </div>
+                                <div class="row">
+                                  <span class="timer">2.45</span>
+                                </div>
+                                <div class="row"></div>
+                              </div>
+
+                              
+                          </div>
+                       </div>
+                      </div>
+
+
+
+                      <div class="col">
+                        <div class="p-0">
+                          <div class="p-0">
+                           <div class="row" style="height:100px;">
+
+                              <div class="col-3">
+                                <img class="latest-release-img" src="https://images.genius.com/69ba54859a419c72a793b3890c0319dc.999x999x1.jpg">
+                              </div>
+
+                              <div class="col-7">
+                                <div class="row" style="height: 33%;"></div>
+                                <div class="row" style=" height: 33%;">
+                                   <span class="singer-name">Spirits</span>
+                                </div>
+                                <div class="row">
+                                  <span class="date">28 Jan 2016</span>
+                                </div>
+                              </div>
+
+                              <div class="col-2">
+                                <div class="row">
+
+                                  <div class="dropdown">
+                                      <p class=" triple-dot" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">...
+                                      </p>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                      </ul>
+                                  </div>
+
+                                </div>
+                                <div class="row">
+                                  <span class="timer">4.44</span>
+                                </div>
+                                <div class="row"></div>
+                              </div>
+
+                              
+                          </div>
+                       </div>
+                        </div>
+                      </div>
+
+                  </div>
+
+               
+
+          </div>
+      </div>
+    </div>
+
+
+
+    <!-- POPULAR ARTIST -->
+
+
+    <div class="container-fluid" id="popular-artist-position">
+      <div class="row">
+        <div class="col-12 col-lg-9">
+          
+
+          <div class="row popular-artist">
+                  <div class="col-12">Popular Artist</div>
+          </div>
+
+
+          <div class="row" style="padding-right: 16px; margin-bottom: 20px;">
+                    <div class="col-2"><a href="salenagomez.html"><img class="popular-artist-img" src="Assets/Selena-Gomez.jpg">
+                    <div class="row popular-artist-name">Selena Gomez</div></a>
+           
+                    </div>
+
+                    <div class="col-2"><img class="popular-artist-img" src="https://www.geo.tv/assets/uploads/updates/2021-07-24/361462_2586773_updates.jpg">
+                      <div class="row popular-artist-name">Taylor Swift</div>
+           
+                    </div>
+                    <div class="col-2"><img class="popular-artist-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsiViPpNdaIXROjjgpmI86i2JouAGF2h262RI1-9mMc6iQC3YarKtPbknXN3Lch8cZOIc&usqp=CAU">
+                      <div class="row popular-artist-name">Ed Sheeran</div>
+           
+                    </div>
+                    <div class="col-2"><img class="popular-artist-img" src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2015%2F04%2Fcharlie-puth-1-2000.jpg&q=60">
+                      <div class="row popular-artist-name">Charlie Puth</div>
+           
+                    </div>
+                    <div class="col-2"><img class="popular-artist-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Zayn_Wiki_%28cropped%29.jpg/800px-Zayn_Wiki_%28cropped%29.jpg">
+                      <div class="row popular-artist-name">Zayn Malik</div>
+           
+                    </div>
+                    <div class="col-2"><img class="popular-artist-img" src="https://cdns-images.dzcdn.net/images/artist/e65d62ecd00b8bf1ba89073943ac62a1/500x500.jpg">
+                      <div class="row popular-artist-name">Maroon 5</div>
+
+           
+                    </div>
+
+
+          </div>
+
+
+  
+
+
+        </div>
+      </div> 
+    </div>
+
+
+<!-- Radio Stations -->
+
+
+
+
+
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col col-lg-9">
+                
+                <div class="row radio-station-background"  style="margin-top:20px;">
+                  <div class="col-2 ">
+                        <div class="stations">
+                        <div id="div1">
+                        <div id="div2">
+                        <div id="div3">
+                              <img id="play-button-img" src="website_logo.png">
+                              <p class="stations-text">STATIONS</p>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                  </div>
+
+                  <div class="col-2">
+                    <img class="radio-station-img" src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"></div>
+                  <div class="col-2"><img class="radio-station-img" src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80"></div>
+                  <div class="col-2"><img class="radio-station-img" src="https://images.unsplash.com/photo-1468818438311-4bab781ab9b8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"></div>
+                  <div class="col-2"><img class="radio-station-img" src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fHdvcmtvdXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></div>
+                  <div class="col-2"><img class="radio-station-img" src="https://images.unsplash.com/photo-1629276301687-be2af9fd6ba8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"></div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- MUSIC-THEME -->
+
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col col-lg-9">
+
+                <div class="row music-themes-2">
+                <!-- 3 divs content -->
+                <div class="col-2 col-lg-4 outer-div">
+                    <div class="inner-div">
+                        <span>party</span>
+                    </div>
+                </div>
+                <div class="col-2 col-lg-4 outer-div">
+                    <div class="inner-div">
+                        <span>Electronic</span>
+                    </div>
+                </div>
+                <div class="col-2 col-lg-4 outer-div">
+                    <div class="inner-div">
+                        <span>Travel</span>
+                    </div>
+                </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+<!--Latest English  -->
+
+    <div class="container-fluid">
+      <div class="row latest-english-row">
+        <div class="col col-lg-9" >
+
+                  <div class="row latest-english-header">Latest English</div>
+                  <div class="row" style="height:300px">
+                    <div class="col-4 col-md-2 latest-english-img "><center><img src="https://i.scdn.co/image/ab67616d0000b27397e971f3e53475091dc8d707"></center>
+                      <div class="row latest-english-name">Dandelions</div>
+                      <div class="row latest-english-date">20 Aug 2021</div>
+
+                    </div>
+
+                    <div class="col-4 col-md-2 latest-english-img"><center><img src="https://i.scdn.co/image/ab67616d0000b2738b46921b586889dabff7ba3f"></center>
+                      <div class="row latest-english-name">Jigle Jigle</div>
+                      <div class="row latest-english-date">20 Aug 2021</div>
+           
+                    </div>
+                    <div class="col-4 col-md-2 latest-english-img"><center><img src="https://images.genius.com/d98059a0f2afd10b04b912355c0e8ceb.1000x1000x1.png"></center>
+                      <div class="row latest-english-name">As It Was</div>
+                      <div class="row latest-english-date">20 Aug 2021</div>
+           
+                    </div>
+                    <div class="col-4 col-md-2 latest-english-img"><center><img src="https://i0.wp.com/abokimusik.com/wp-content/uploads/2022/06/BTS.full_.104154.jpg?fit=1000%2C991&ssl=1"></center>
+                      <div class="row latest-english-name">BTS-RUN</div>
+                      <div class="row latest-english-date">20 Aug 2021</div>
+           
+                    </div>
+                    <div class="col-4 col-md-2 latest-english-img"><center><img src="https://images.genius.com/df55dd551fbc956ba1b22856ab655b7e.1000x1000x1.jpg"></center>
+                      <div class="row latest-english-name">Until I Found U</div>
+                      <div class="row latest-english-date">20 Aug 2021</div>
+           
+                    </div>
+                    <div class="col-4 col-md-2 latest-english-img"><center><img src="https://i1.sndcdn.com/artworks-NTWumskIAtzxndKO-yz1ryA-t500x500.jpg"></center>
+                      <div class="row latest-english-name">Stay</div>
+                      <div class="row latest-english-date">20 Aug 2021</div>
+                    </div>
+
+                  </div>
+
+
+                 
+          
+        </div>
+      </div>
+    </div>
+
+
+<!--Latest English X 2  -->
+
+    <div class="container-fluid" id="latest-english">
+      <div class="row latest-english-row-x2">
+        <div class="col col-lg-9" >
+
+                  <div class="row latest-english-header">Latest English</div>
+                  <div class="row" style="height:300px">
+                    <div class="col-md-2 latest-english-img "><center><img src="https://i.scdn.co/image/ab67616d0000b27397e971f3e53475091dc8d707"></center>
+                      <div class="row latest-english-name">Dandelions</div>
+                      <div class="row latest-english-date">20 Aug 2021</div>
+
+                    </div>
+
+                    <div class="col-md-2 latest-english-img"><center><img src="https://i.scdn.co/image/ab67616d0000b2738b46921b586889dabff7ba3f"></center>
+                      <div class="row latest-english-name">Jigle Jigle</div>
+                      <div class="row latest-english-date">20 Aug 2021</div>
+           
+                    </div>
+                    <div class="col-md-2 latest-english-img"><center><img src="https://images.genius.com/d98059a0f2afd10b04b912355c0e8ceb.1000x1000x1.png"></center>
+                      <div class="row latest-english-name">As It Was</div>
+                      <div class="row latest-english-date">20 Aug 2021</div>
+           
+                    </div>
+                    <div class="col-md-2 latest-english-img"><center><img src="https://i0.wp.com/abokimusik.com/wp-content/uploads/2022/06/BTS.full_.104154.jpg?fit=1000%2C991&ssl=1"></center>
+                      <div class="row latest-english-name">BTS-RUN</div>
+                      <div class="row latest-english-date">20 Aug 2021</div>
+           
+                    </div>
+                    <div class="col-md-2 latest-english-img"><center><img src="https://images.genius.com/df55dd551fbc956ba1b22856ab655b7e.1000x1000x1.jpg"></center>
+                      <div class="row latest-english-name">Until I Found U</div>
+                      <div class="row latest-english-date">20 Aug 2021</div>
+           
+                    </div>
+                    <div class="col-md-2 latest-english-img"><center><img src="https://i1.sndcdn.com/artworks-NTWumskIAtzxndKO-yz1ryA-t500x500.jpg"></center>
+                      <div class="row latest-english-name">Stay</div>
+                      <div class="row latest-english-date">20 Aug 2021</div>
+                    </div>
+
+                  </div>
+
+                 
+          
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="top-arrow" style="position: fixed; margin: auto; color:whitesmoke;">
+        <i class="fa-solid fa-angles-up"></i>
+      </div>
+
+
+
+      <!-- Footer -->
+
+      <footer class="footer">
+          <div class="active-song-description">
+              <!-- song image -->
+              <div id="song-image">
+                  <img src="https://www.billboard.com/wp-content/uploads/media/ed-sheeran-perfect-MV-still-2018-billboard-1548.jpg?w=1024">
+              </div>
+              <!-- song name and author -->
+              <div class="song-desc">
+                  <div>
+                      Perfect
+                  </div>
+                  <div>
+                      Ed Sheeran
+                  </div>
+                  <!-- heart icon and ban icon -->
+              </div>
+              <div class="heart-and-ban-icon">
+                  <span>
+                      <i class="fa-solid fa-heart favourites" ></i>
+                  </span>
+                  <span>
+                      &nbsp &nbsp &nbsp &nbsp<i class="fas fa-ban favourites"></i>
+                  </span>
+              </div>
+          </div>
+          <!-- these are the main player controls -->
+          <div class="player">
+              <div class="controls">
+                  <div><i class="fas fa-random"></i></div>
+                  <div><i class="fas fa-step-backward"></i></div>
+                  <div><i class="fas fa-pause-circle"></i></div>
+                  <div><i class="fas fa-step-forward"></i></div>
+                  <div><i class="fas fa-redo"></i></div>
+              </div>
+              <!-- this is the slider -->
+              <div id="slider">
+                  <!-- current time -->
+                  <div class="time">
+                      1:39
+                  </div>
+                  <div class="slidecontainer">
+                      <input type="range" min="0" max="100" value="0" class="slider" id="myRange">
+                  </div>
+                  <!-- total time -->
+                  <div class="time">
+                      4:44
+                  </div>
+              </div>
+          </div>
+          <!-- other icons including the volume slider and all -->
+          <div class="extras">
+              <div>
+                  <i class="fas fa-list-ul"></i>
+              </div>
+              <div>
+                  <i class="fas fa-laptop"></i>
+              </div>
+              <div>
+                  <i class="fas fa-volume-up"></i>
+              </div>
+              <div class="slidecontainer" style="width:30%;">
+                  <input type="range" min="0" max="100" value="0" class="slider" id="myRange" style="margin-top:0px;">
+              </div>
+              <div>
+                  <i class="fas fa-expand-alt"></i>
+
+              </div>
+
+          </div>
+      </footer>
+
+
+
+
+
+
+
+
+
+  
+      
+ 
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      var myAudio = document.getElementById("myAudio");
+      var isPlaying = false;
+
+      function togglePlay() {
+        isPlaying ? myAudio.pause() : myAudio.play();
+      };
+
+      myAudio.onplaying = function() {
+        isPlaying = true;
+      };
+      myAudio.onpause = function() {
+        isPlaying = false;
+      };
+
+
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+<!-- 
+<div class="row">
+
+                <div class="col-6 col-lg-5"><img class="latest-release-img" src="https://images.unsplash.com/photo-1615764040719-755348cd691b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"></div>
+
+                <div class="col-6 col-lg-7">
+                  <div class="row">
+                    <div class="dropdown">
+                        <p class=" triple-dot" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">...
+                        </p>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </div>
+                  </div>
+
+
+                  <div class="row">
+                    <span class="singer-name">Hoobastank</span>
+                    
+                  </div>
+                  <div class="row"></div>
+                </div>
+              </div> -->
+
+
+              
+
+
+
